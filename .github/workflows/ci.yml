@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  merge_group:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello world"
+  deploy:
+    needs: [test]
+    if: ${{ github.event_name == 'merge_group' }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploy"
