@@ -1,5 +1,6 @@
-# CI
-/.github/ @marcoieni
+# All other changes have to be blessed by infra admins
+* @marcoieni
 
-# Code
-/sync-team/ @marcoieni
+# People with write access to this repo can approve changes to these files
+# They will not be automatically review requested though.
+/team/**.toml
